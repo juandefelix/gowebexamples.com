@@ -18,6 +18,8 @@ type TodoPageData struct {
 
 
 func main() {
+	// The program will try to find the template in the same directory where you run the `go run command,`
+	// so make sure that you run this file from the same directory in your terminal
 	tmpl := template.Must(template.ParseFiles("layout.html"))
 	data := TodoPageData{
 		PageTitle: "Today TODOS",
