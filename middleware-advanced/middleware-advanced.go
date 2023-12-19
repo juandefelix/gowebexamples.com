@@ -46,9 +46,3 @@ func main() {
 	http.HandleFunc("/", Chain(Hello, Method("GET"), Logging()))
 	http.ListenAndServe(":8080", nil)
 }
-
-// what's the signature of the handler function?
-// 	- a function that accepts a ResponseWriter and a Request
-// what's the signature of the Middleware?
-// 	- a function that accetsa a handler function and returns another
-
