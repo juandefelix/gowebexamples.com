@@ -14,7 +14,7 @@ var upgrader = websocket.Upgrader{
 
 func main() {
 	http.HandleFunc("/echo", func(w http.ResponseWriter, r *http.Request) {
-		conn, _ := upgrader.Upgrade(w, r, nil) // ignoring what I'm assuming is a connection error
+		conn, _ := upgrader.Upgrade(w, r, nil) // ignoring a connection error
 
 		for {
 			msgType, msg, err := conn.ReadMessage()
